@@ -31,6 +31,7 @@ if(langEN ==false && langVN==false){langZH=true; }
 		document.querySelector('.block--category3 .js-nodeMain a').innerText="与产品有关";
 		}
 		if(document.querySelector('a[href*="threads/25/"]')){document.querySelector('a[href*="threads/25/"]').innerText='想建议新网站吗？ 阅读此线程。';}
+		if(document.querySelector('a[href*="threads/32/"]')){document.querySelector('a[href*="threads/32/"]').innerText=threads_32TITLE_CN;}
 		if(/(\/32\/)/g.test(location.search)){document.querySelector('article .bbWrapper').innerHTML=threads_32_CN;}
 		
 	}
