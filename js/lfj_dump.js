@@ -1,4 +1,4 @@
-var loaitru="loaitru dump".split(" "),
+var loaitru="document self loaitru dump".split(" "),
 court=0,totalc=0,nextdo=2;function dump(b,c){setTimeout(function(){for(var a in b)if(1!=loaitru.includes(""+a))try{typeof b[""+a]==c?("function"==c||"array"==c?console.log("name: "+a+" -> "+b[""+a].toString()):console.log("name: "+a+" -> "+JSON.stringify(b[""+a])),loaitru.push(a)):dump(b[""+a],c)}catch(d){dump(b[""+a],c)}},nextdo)}console.clear();
 console.log('%cC\u00e1ch d\u00f9ng:  %cdump%c(%cglobalThis%c,"%cdumpType%c");',"color: #fff;font-size: 20px","color: #ff5555;font-size: 20px","color: #f2f5f5;font-size: 20px","color: #2ffbfb;font-size: 20px","color: #f2f5f5;font-size: 20px","color: #d1f9a5;font-size: 20px","color: #f2f5f5;font-size: 20px");
 console.log("%cM\u1ed9t s\u1ed1 dumpType: %cstring%c, %cfunction%c,%c object","color: #fff;font-size: 20px","color: #d1f9a5;font-size: 20px","color: #fff;font-size: 20px","color: #d1f9a5;font-size: 20px","color: #fff;font-size: 20px;font-size: 20px","color: #d1f9a5;font-size: 20px");
