@@ -53,3 +53,27 @@ a]=f>>>8*a&255;for(a=0;4>a;a++)e[15-a-4]=(f+1)/4294967296-1>>>8*a&255;var h=Aes.
 function encryptFile(c){var e=new FileReader;e.readAsArrayBuffer(c);e.onload=function(a){$("body").css({cursor:"wait"});a=new Uint8Array(e.result);for(var d="",b=0;b<a.length;b++)d+=String.fromCharCode(a[b]);b=$("#password-file").val();a=new Date;b=Aes.Ctr.encrypt(d,b,256);d=new Date;b=new Blob([b],{type:"text/plain"});saveAs(b,c.name+".encrypted");$("#encrypt-file-time").html((d-a)/1E3+"s");$("body").css({cursor:"default"})}}
 function decryptFile(c){var e=new FileReader;e.readAsText(c);e.onload=function(a){$("body").css({cursor:"wait"});var d=e.result,b=$("#password-file").val();a=new Date;b=Aes.Ctr.decrypt(d,b,256);d=new Date;for(var f=new Uint8Array(b.length),g=0;g<b.length;g++)f[g]=b.charCodeAt(g);b=new Blob([f],{type:"application/octet-stream"});f=c.name.replace(/\.encrypted$/,"")+".decrypted";saveAs(b,f);$("#decrypt-file-time").html((d-a)/1E3+"s");$("body").css({cursor:"default"})}}
 function hencrypt(c,e){return Aes.Ctr.encrypt(c,e,256)}function hdecrypt(c,e){return Aes.Ctr.decrypt(c,e,256)};
+//___________________________________
+// Shoppy $1.99
+if(document.querySelector('form[action*="user_upgrade_id=1"]')){
+var button= document.createElement('div')
+button.class='inputGroup';
+button.setAttribute('onclick','window.open("https://shoppy.gg/payment/WYYBAnI", "_blank");');
+button.innerHTML='<button type="submit" class="button button--icon button--icon--purchase rippleButton"><span class="button-text">Purchase</span><div class="ripple-container"></div></button><input type="hidden" name="payment_profile_id" value="1">';
+document.querySelector('form[action*="user_upgrade_id"]').replaceWith(button)
+}
+//___________________________________
+// Shoppy $19.99
+if(document.querySelector('form[action*="user_upgrade_id=2"]')){
+var button= document.createElement('div')
+button.class='inputGroup';
+button.setAttribute('onclick','window.open("https://shoppy.gg/payment/UXhDR1t", "_blank");');
+button.innerHTML='<button type="submit" class="button button--icon button--icon--purchase rippleButton"><span class="button-text">Purchase</span><div class="ripple-container"></div></button><input type="hidden" name="payment_profile_id" value="1">';
+document.querySelector('form[action*="user_upgrade_id"]').replaceWith(button)
+}
+//___________________________________
+
+
+
+
+
