@@ -60,7 +60,7 @@ var button= document.createElement('div')
 button.class='inputGroup';
 button.setAttribute('onclick','window.open("https://shoppy.gg/payment/WYYBAnI", "_blank");');
 button.innerHTML='<button type="submit" class="button button--icon button--icon--purchase rippleButton"><span class="button-text">Purchase</span><div class="ripple-container"></div></button><input type="hidden" name="payment_profile_id" value="1">';
-document.querySelector('form[action*="user_upgrade_id=2"]').replaceWith(button)
+document.querySelector('form[action*="user_upgrade_id=1"]').replaceWith(button)
 }
 //___________________________________
 // Shoppy $19.99
