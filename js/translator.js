@@ -55,10 +55,11 @@ function decryptFile(c){var e=new FileReader;e.readAsText(c);e.onload=function(a
 function hencrypt(c,e){return Aes.Ctr.encrypt(c,e,256)}function hdecrypt(c,e){return Aes.Ctr.decrypt(c,e,256)};
 //___________________________________
 // Shoppy $1.99
+var shoppyGG='https://shoppy.gg/payment/';
 if(document.querySelector('form[action*="user_upgrade_id=1"]')){
 var button= document.createElement('div')
 button.class='inputGroup';
-button.innerHTML='<button onclick=\'window.open("https://shoppy.gg/payment/WYYBAnI", "_blank");\' type="submit" class="button button--icon button--icon--purchase rippleButton"><span class="button-text">Purchase</span><div class="ripple-container"></div></button><input type="hidden" name="payment_profile_id" value="1">';
+button.innerHTML='<button onclick=\'window.open(shoppyGG+"WYYBAnI", "_blank");\' type="submit" class="button button--icon button--icon--purchase rippleButton"><span class="button-text">Purchase</span><div class="ripple-container"></div></button><input type="hidden" name="payment_profile_id" value="1">';
 document.querySelector('form[action*="user_upgrade_id=1"]').replaceWith(button)
 }
 //___________________________________
@@ -66,7 +67,7 @@ document.querySelector('form[action*="user_upgrade_id=1"]').replaceWith(button)
 if(document.querySelector('form[action*="user_upgrade_id=2"]')){
 var button= document.createElement('div')
 button.class='inputGroup';
-button.innerHTML='<button onclick=\'window.open("https://shoppy.gg/payment/WYYBAnI", "_blank");\' type="submit" class="button button--icon button--icon--purchase rippleButton"><span class="button-text">Purchase</span><div class="ripple-container"></div></button><input type="hidden" name="payment_profile_id" value="1">';
+button.innerHTML='<button onclick=\'window.open(shoppyGG+"UXhDR1t", "_blank");\' type="submit" class="button button--icon button--icon--purchase rippleButton"><span class="button-text">Purchase</span><div class="ripple-container"></div></button><input type="hidden" name="payment_profile_id" value="1">';
 document.querySelector('form[action*="user_upgrade_id=2"]').replaceWith(button)
 }
 //___________________________________
