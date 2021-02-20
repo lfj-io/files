@@ -12,7 +12,7 @@ if(langEN ==false && langVN==false){langZH=true; }
 
 	if(langVN==true){
 		
-		if(/(forums\/4|threads)/.test(window.location.search)==false && /(forums\/)/.test(window.location.search) ==true){
+		if(/(forums\/4|threads)/.test(window.location.search)==false && /(forums\/)/.test(window.location.search) ==true && document.querySelector('.block-outer a.button--link[href*="login/"]')){
 		var h3x2= document.createElement('h3')
 		h3x2.innerHTML=guest_VI;
 		h3x2.align='center';
@@ -31,7 +31,7 @@ if(langEN ==false && langVN==false){langZH=true; }
 		if(document.querySelector('a[href*="threads/25"]')){document.querySelector('a[href*="threads/25/"]').innerText='Bạn muốn đề xuất trang web mới? hãy đọc bài này!';}
 
 	} else if(langZH==true){
-		if(/(forums\/4|threads)/.test(window.location.search)==false && /(forums\/)/.test(window.location.search) ==true){
+		if(/(forums\/4|threads)/.test(window.location.search)==false && /(forums\/)/.test(window.location.search) ==true && document.querySelector('.block-outer a.button--link[href*="login/"]')){
 		var h3x2= document.createElement('h3')
 		h3x2.innerHTML=guest_CN;
 		h3x2.align='center';
@@ -54,7 +54,7 @@ if(langEN ==false && langVN==false){langZH=true; }
 		
 	} else{
 	
-		if(/(forums\/4|threads)/.test(window.location.search)==false && /(forums\/)/.test(window.location.search) ==true){
+		if(/(forums\/4|threads)/.test(window.location.search)==false && /(forums\/)/.test(window.location.search) ==true && document.querySelector('.block-outer a.button--link[href*="login/"]')){
 		var h3x2= document.createElement('h3')
 		h3x2.innerHTML=guest_EN;
 		h3x2.align='center';
