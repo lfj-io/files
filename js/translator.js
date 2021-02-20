@@ -2,8 +2,8 @@ var threads_32_CN = '<h2>如何写好问题报告</h2>所有伟大的项目都�
 var threads_25_CN = '<h4><span style="font-size: 18px">您可以在本主题的下一个更新中添加希望LFJ支持这些网站的网站。</span></h4><ul><li data-xf-list-type="ul">根据您的要求，该网站必须具有免费/或试用版，且无需信用卡。 如果这些网站没有免费/试用版选项，则必须包括这些网站的付费帐户（ <a href="https://lfj.io/#contacts" target="_blank" class="link link--external" rel="noopener">您可以在此处发送帐户</a>）</li><li data-xf-list-type="ul">请检查评论或[ <a href="https://bbs.lfj.io/index.php?search/&type=post" class="link link--internal">搜索</a>]以确保您的请求是唯一的。 如果您看到有人已经请求，则只需对该评论进行投票。</li></ul>';
 var threads_32TITLE_CN='如何写好问题报告';
 var guest_CN='你想看的内容只是提供给成员。';
-var guest_EN='The content you want to see is only available to members.';
-var guest_VI='Nội dung bạn muốn xem chỉ dành cho thành viên. ';
+var guest_EN='This page contains private content available only to registered members.';
+var guest_VI='Trang này chứa nội dung riêng tư chỉ dành cho thành viên đã đăng ký. ';
 var langVN=document.querySelector('a[href*="misc/language"]').innerText.match(/ng\sVi/ig)?true:false;
 var langEN=document.querySelector('a[href*="misc/language"]').innerText.match(/english/ig)?true:false;
 var langZH=false;
