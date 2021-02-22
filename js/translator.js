@@ -88,6 +88,7 @@ if(langEN ==false && langVN==false){langZH=true; }
                   try{var cexid = parseInt(xj.getAttribute('data-prefix-id'));} catch(e){var prexid=1111111;}
                   try{var cxcswd = parseInt(xj.getAttribute('value'));} catch(e){var prexid=1111111;}
 			var matchInclude = xj.innerText;
+		try{ 
                     if(prexid==10){xj.querySelector('span.label').innerText='建議';}
                     if(prexid==11){xj.querySelector('span.label').innerText='故障';}
                     if(prexid==12){xj.querySelector('span.label').innerText='已确认';}
@@ -99,6 +100,7 @@ if(langEN ==false && langVN==false){langZH=true; }
                     if(prexid==18){xj.querySelector('span.label').innerText='已發佈';}
                     if(prexid==21){xj.querySelector('span.label').innerText='题';}
                     if(prexid==22){xj.querySelector('span.label').innerText='稳定';}
+		} catch(e){}	
 		try{  
 		if(!xj.querySelector('span.label')){
                     if(matchInclude.includes('Suggestions')){xj.innerText='建議';}
