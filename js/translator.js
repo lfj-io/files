@@ -83,10 +83,11 @@ if(langEN ==false && langVN==false){langZH=true; }
                 if(document.querySelector('a[href*="/language"]').text.match(/中文/i)){
                   function rodloeRO(){
                   
-                document.querySelectorAll('a[href*="prefix_id"],[data-prefix-id],option[data-prefix-class],a label').forEach(function(xj) {
+                document.querySelectorAll('a[href*="prefix_id"],[data-prefix-id],option[data-prefix-class],a label,span[class*="label label"]').forEach(function(xj) {
                   try{var prexid = parseInt(xj.href.match(/prefix\_id([0-9\]\[\'\"\s\_]+)?\=([0-9]+)/i)[2]);} catch(e){var prexid=1111111;}
                   try{var cexid = parseInt(xj.getAttribute('data-prefix-id'));} catch(e){var prexid=1111111;}
                   try{var cxcswd = parseInt(xj.getAttribute('value'));} catch(e){var prexid=1111111;}
+			var matchInclude = xj.innerText;
                     if(prexid==10){xj.querySelector('span.label').innerText='建議';}
                     if(prexid==11){xj.querySelector('span.label').innerText='故障';}
                     if(prexid==12){xj.querySelector('span.label').innerText='已确认';}
@@ -98,6 +99,19 @@ if(langEN ==false && langVN==false){langZH=true; }
                     if(prexid==18){xj.querySelector('span.label').innerText='已發佈';}
                     if(prexid==21){xj.querySelector('span.label').innerText='题';}
                     if(prexid==22){xj.querySelector('span.label').innerText='稳定';}
+                    
+                    if(matchInclude.includes('Suggestions')){xj.innerText='建議';}
+                    if(matchInclude.includes('Bug')){xj.innerText='故障';}
+                    if(matchInclude.includes('Confirmed')){xj.innerText='已确认';}
+                    if(matchInclude.includes('Deployed')){xj.innerText='已解决';}
+                    if(matchInclude.includes('Answered')){xj.innerText='已答案';}
+                    if(matchInclude.includes('Issue')){xj.innerText='问题';}
+                    if(matchInclude.includes('Fixed')){xj.innerText='已修复';}
+                    if(matchInclude.includes('Invalid')){xj.innerText='无效';}
+                    if(matchInclude.includes('Question')){xj.innerText='题';}
+                    if(matchInclude.includes('Released')){xj.innerText='已發佈';}
+                    if(matchInclude.includes('stable')){xj.innerText='稳定';}
+			
                        /*
                     if(cxcswd==10){xj.value='建議';}
                     if(cxcswd==11){xj.value='故障'; }
