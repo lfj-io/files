@@ -99,7 +99,8 @@ if(langEN ==false && langVN==false){langZH=true; }
                     if(prexid==18){xj.querySelector('span.label').innerText='已發佈';}
                     if(prexid==21){xj.querySelector('span.label').innerText='题';}
                     if(prexid==22){xj.querySelector('span.label').innerText='稳定';}
-                    
+		try{  
+		if(!xj.querySelector('span.label')){
                     if(matchInclude.includes('Suggestions')){xj.innerText='建議';}
                     if(matchInclude.includes('Bug')){xj.innerText='故障';}
                     if(matchInclude.includes('Confirmed')){xj.innerText='已确认';}
@@ -111,7 +112,7 @@ if(langEN ==false && langVN==false){langZH=true; }
                     if(matchInclude.includes('Question')){xj.innerText='题';}
                     if(matchInclude.includes('Released')){xj.innerText='已發佈';}
                     if(matchInclude.includes('stable')){xj.innerText='稳定';}
-			
+		}} catch(e){}
                        /*
                     if(cxcswd==10){xj.value='建議';}
                     if(cxcswd==11){xj.value='故障'; }
